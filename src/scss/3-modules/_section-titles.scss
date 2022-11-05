@@ -1,0 +1,12 @@
+@use '../1-base/responsive' as bk;
+
+.title{
+    font-size: 2rem;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+    @include bk.breakpoint(low){
+        font-size: 2.5rem;
+    }
+
+}

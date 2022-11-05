@@ -1,0 +1,25 @@
+@use '../1-base/variables' as var;
+@use '../1-base/responsive' as bk;
+
+
+.input-box{
+    display: flex; //Remove o gap entre o input e o button;
+    &__input {
+        width: 20vw;
+        border-radius: 40px 0px 0px 40px;
+        border: 1px solid var.$text-gray-color;
+
+        @include bk.breakpoint(low){
+            width: 50vw;   
+        }
+    }
+
+    &__button {
+        font-weight: 900;
+    }
+
+    &__input, &__button{
+        font-size: 0.9rem;
+        padding: 10px 20px 10px 20px;
+    }
+}

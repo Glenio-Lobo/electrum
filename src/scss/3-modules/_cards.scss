@@ -1,0 +1,88 @@
+@use '../1-base/variables' as var;
+@use '../1-base/responsive' as bk;
+
+.produtos{
+
+    &__card{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid var.$text-gray-color;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        width: 230px;
+        transition: 0.5s;
+        
+        &:hover{
+            border-color: var.$color-primary;
+            box-shadow: 1px 1px 10px var.$text-gray-color;
+        }
+
+        @include bk.breakpoint(low){
+            width: 90%;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__span--label{
+        position: absolute;
+        padding: 4px 8px;
+        font-size: 0.9rem;
+        top: 20px;
+        right: 20px;
+        border: 1px solid var.$color-primary;
+
+        &-new{
+            color: var.$color-text-white;
+            background-color: var.$color-primary;
+        }
+
+        &-hot{
+            color: var.$color-primary;
+            background-color: var.$color-text-white;
+        }
+    }
+    
+    &__nome, &__button, &__rating, &__price{
+        margin-top: 15px;
+    }
+
+    &__categoria, &__nome {
+        text-transform: uppercase;
+    }
+
+    &__nome{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    &__categoria{
+        color: var.$text-gray-color;
+        font-size: 0.9rem;
+    }
+
+    &__price, &__rating{
+        color: var.$color-primary;
+    }
+
+    &__rating{
+        font-size: 0.8rem;
+    }
+
+    &__price{
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+
+    &__img{
+        height: 100%;
+        width: 90%;
+    }
+
+    &__button{
+        font-size: 0.95rem;
+        font-weight: 700;
+        padding: 7px 10px;
+    }
+}

@@ -1,0 +1,22 @@
+@use '../1-base/variables' as var;
+
+$banner-images: (
+                    'banner-1' : '../img/banner-1-lazy.jpg',
+                    'banner-2' : '../img/banner-2-lazy.jpg',
+                    'banner-3' : '../img/banner-3-lazy.jpg'
+                
+                );
+
+@each $key, $dir in $banner-images{
+    .#{$key}{
+        background-image: url($dir);
+    }
+}
+
+// .banner.lazy{
+//     filter: blur(10px);
+// }
+
+.banner__container{
+    padding: 50px 0;
+}

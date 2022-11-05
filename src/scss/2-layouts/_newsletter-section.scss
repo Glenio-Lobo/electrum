@@ -1,0 +1,30 @@
+@use '../1-base/variables' as var;
+
+.news {
+    margin-top: 50px;
+    border-top: 1px solid var.$text-gray-color;
+}
+
+.news-container{
+    margin: 0px auto;
+    display:flex;
+    flex-direction: column;
+    max-width: var.$container-width;
+    text-align: center;
+
+    &__form{
+        align-self: center;
+    }
+
+    &__social{
+        display: inline;
+        margin: 4rem 0;
+        font-size: 1rem;
+        
+        span{
+            border: 1px solid var.$text-gray-color;
+            padding: 10px 15px;
+            margin-right: 20px;
+        }
+    }
+}

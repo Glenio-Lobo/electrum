@@ -1,0 +1,27 @@
+@use '../1-base/variables' as var;
+@use '../1-base/responsive' as bk;
+
+.promocao__timer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    &__child{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        border-radius: 50%;
+        background-color: var.$color-primary;
+        color: var.$color-text-white;
+        font-size: 1.2rem;
+        font-weight: 600;
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+
+        p:nth-of-type(2){
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
+}

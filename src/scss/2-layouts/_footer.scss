@@ -1,0 +1,79 @@
+@use '../1-base/variables' as var;
+@use '../1-base/responsive' as bk;
+
+
+.footer {
+    background-color: var.$color-bg-secondary;
+    color: var.$text-gray-color;
+    font-size: 0.9rem;
+    padding-top: 50px;
+    
+    &__sobre, &__categorias, &__menu, &__info{
+        @include bk.breakpoint(low){
+            align-self: flex-start;
+            margin: 0px 0px 0px 50px;
+        }
+    }
+
+    // Estilização das áreas com título.
+    &__title {
+        font-size: clamp(1rem, 3vw, 1.6rem);
+        margin-bottom: 20px;
+        color: white;
+
+        @include bk.breakpoint(low){
+            margin-top: 50px;
+            font-size: 2rem;
+        }
+    }
+
+    &__categorias, &__info {
+        margin-right: 30px;
+
+        @include bk.breakpoint(low){
+            margin-right: 0 px;
+        }
+    }
+
+    &__categorias, &__info, &__menu{
+        width: 20%;
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__sobre {
+        width: 40%;
+
+        i {
+            color: var.$color-primary;
+            margin-right: 5px;
+        }
+
+        p {
+            margin-top: 15px;
+        }
+    }
+
+    &__description{
+        width: 80%;
+    }
+}
+
+.copyright{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+    &__cartoes {
+        font-size: 3rem;
+        opacity: 0.5;
+    }
+
+    &__title{
+        margin: 20px 0 40px 0;
+    }
+}

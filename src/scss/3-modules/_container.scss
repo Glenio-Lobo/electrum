@@ -1,0 +1,14 @@
+@use '../1-base/variables' as var;
+@use '../1-base/responsive' as bk;
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: var.$container-width;
+
+    @include bk.breakpoint(low){
+        flex-direction: column;
+        align-items: center;
+    }
+}
